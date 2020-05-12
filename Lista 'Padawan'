@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Princi {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		
+    //QUESTÃO 1 - Cálculo de IMC
+    
+		double peso, altura, IMC;
+		System.out.println("Olá, User! Por favor insira seu peso (em KG):");
+		peso = Double.parseDouble(teclado.nextLine());
+		System.out.println("Certo, agora insira sua altura (em METROS):");
+		altura = Double.parseDouble(teclado.nextLine());
+		IMC = peso / (Math.pow(altura, 2));
+		System.out.println("Seu IMC é: " + IMC);
+		if(IMC < 18.5) {
+			System.out.println("Tá magin, viu? tem que comer.");
+			System.exit(0);
+		}
+		if(IMC >= 18.5 || IMC <= 24.9) {
+			System.out.println("Parabéns, você é normalíssimo");
+			System.exit(0);
+		}
+		if(IMC >= 25.0 || IMC <= 29.9) {
+			System.out.println("Tá com sobrepeso, viu, amiguinho? Vamo fazer uns exercício aí");
+			System.exit(0);
+		}
+		if(IMC >= 30 || IMC <= 34.9) {
+			System.out.println("Tu sabia que tu tá na obeso? Hora de fazer umas dieta, pcr");
+			System.exit(0);
+		}
+		if(IMC >= 35.0 || IMC <= 39.9) {
+			System.out.println("Amigue, tu tá com OBESIDADE MÓRBIDA. Sabe o que é isso? TU PODE MORRER DE VEIA ENTUPIDA CARA");
+			System.exit(0);
+		}
+		if(IMC > 39.9) {
+			System.out.println("Tem mais jeito não, já morreu faz tempo e esqueceram de enterrar.");
+			System.exit(0);
+		}
+		else {
+			System.out.println("Não foi possível classificar sua faixa de acordo com o IMC, tente novamente.");
+			System.exit(0);
+		}
+		
+		
+		// QUESTÃO 2 - Resultado de uma divisão visível apenas com senha
+		String senha, verif;
+		int num1, num2;
+		double result;
+		System.out.println("\n Por favor, cadastre uma senha:");
+		senha = teclado.nextLine();
+		System.out.println("Beleza, agora me diz um número");
+		num1 = Integer.parseInt(teclado.nextLine());
+		System.out.println("Certo. Me vê mais um puifa");
+		num2 = Integer.parseInt(teclado.nextLine());
+		result = num1 / num2;
+		System.out.println("Legal. Eu fiz a divisão entre esses dois. Para verificar o resultado, digite sua senha mais uma vez.");
+		verif = teclado.nextLine();
+		
+		if(senha.contentEquals(verif)) {
+			System.out.println("Seu resultado é: " + result);
+			System.exit(0);
+		}
+		else{
+			System.out.println("Senha incorreta.");
+			System.exit(0);
+		}
+		
+		
+		// QUESTÃO 3
+	}
+}
