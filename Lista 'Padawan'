@@ -1,3 +1,5 @@
+// ATENÇÃO - para testar, execute cada questão num programa individual com a definição padrão de Scanner
+
 import java.util.Scanner;
 
 public class Princi {
@@ -16,6 +18,7 @@ public class Princi {
 		altura = Double.parseDouble(teclado.nextLine());
 		IMC = peso / (Math.pow(altura, 2));
 		System.out.printf("Seu IMC é %.2f \n", IMC);
+		
 		if(IMC < 18.5) {
 			System.out.println("Tá magin, viu? tem que comer.");
 			System.exit(0);
@@ -46,7 +49,7 @@ public class Princi {
 		}
 		
 		
-		// QUESTÃO 2 - Confirmação de senha para mostrar um resultado
+		// QUESTÃO 2 - Cadastro e verificação de senha
 		
 		String senha, verif;
 		int num1, num2;
@@ -71,7 +74,7 @@ public class Princi {
 		}
 		
 		
-		// QUESTÃO 3 - Qual nome é mais próximo de A
+		// QUESTÃO 3 - Qual nome está 'mais próximo' de A
 		
 		String nome1, nome2, nome3, nome4, nome5, menor;
 		System.out.println("Seguinte, me dá um nome aí ");
@@ -98,6 +101,126 @@ public class Princi {
 		else {menor = nome5;}
 		
 		System.out.println("Dos listados, o nome mais próximo de A é " + menor);
+		System.exit(0);
+		
+		
+		// QUESTÃO 4 - Verificação de senha
+		
+		String verifica, sen = "123456";
+		System.out.println("Olá, User. Por favor, digite sua senha");
+		verifica = teclado.nextLine();
+		if (sen.equals(verifica)) {
+		System.out.println("Acesso Liberado");
+		System.exit(0);}
+		else {
+		System.out.println("Acesso Negado");
+		System.exit(0);}
+		
+		
+		// QUESTÃO 5 - Comparação de número de 'gols'
+		
+		int NacPatos, Treze;
+		System.out.println("Quantos gols fez o Nacional de Patos?");
+		NacPatos = Integer.parseInt(teclado.nextLine());
+		System.out.println("Quantos gols fez o Treze?");
+		Treze = Integer.parseInt(teclado.nextLine());
+		
+		if(NacPatos > Treze) {
+		System.out.println("Nacional de Patos é Campeão!");
+		System.exit(0);}
+		else if(Treze > NacPatos) {
+		System.out.println("Treze é Campeão!");
+		System.exit(0);}
+		else {
+		System.out.println("EMPATE");
+		System.exit(0);}
+		
+		
+		// QUESTÃO 6 - Informa o dia da semana por número
+		
+		int dia;
+		System.out.println("Insira um número de 1 a 7:");
+		dia = Integer.parseInt(teclado.nextLine());
+		
+		switch(dia) {
+		case 1:
+			System.out.println("DOMINGO");
+			break;
+		case 2:
+			System.out.println("SEGUNDA");
+			break;
+		case 3:
+			System.out.println("TERÇA");
+			break;
+		case 4:
+			System.out.println("QUARTA");
+			break;
+		case 5:
+			System.out.println("QUINTA");
+			break;
+		case 6:
+			System.out.println("SEXTA");
+			break;
+		case 7:
+			System.out.println("SABADO");
+			break;
+		default:
+			System.out.println("Dia da semana inválido. Tente novamente");
+		}
+		
+		
+		// QUESTÃO 7 - Informa se a soma de dois números é maior ou menor que um terceiro
+		
+		int A, B, C, soma;
+		System.out.println("Insira o primeiro número:");
+		A = Integer.parseInt(teclado.nextLine());
+		System.out.println("Insira o segundo número:");
+		B = Integer.parseInt(teclado.nextLine());
+		System.out.println("Insira o terceiro número:");
+		C = Integer.parseInt(teclado.nextLine());
+		soma = A + B;
+		
+		if(C > soma) {
+			System.out.println(C + " é maior que " + soma);
+			System.exit(0);}
+		else if(C == soma) { 
+			System.out.println(C + " é igual a " + soma);
+			System.exit(0);}
+		else {
+			System.out.println(C + " é menor que " + soma);
+			System.exit(0);}
+		
+		
+		// QUESTÃO 8 - Sorteia um número entre 1 e 60
+		
+		int sorteio;
+		sorteio = (int) (Math.random() * 60);
+		System.out.println(sorteio);
+		System.exit(0);
+		
+		
+		// QUESTÃO 9 - Informa os números PARES entre 1 e 20
+		
+		for(int i = 2; i < 20; i += 2) {
+			System.out.println(i);
+		}
+		
+		
+		// QUESTÃO 10 - Cálculo da média de 10 alunos com 3 notas cada
+		
+		double nota1, nota2, nota3, media;
+		
+		for(int cont = 1; cont <= 10; cont++) {
+			System.out.println("Calculo da media do aluno " + cont);
+			System.out.println("Insira a primeira nota");
+			nota1 = Double.parseDouble(teclado.nextLine());
+			System.out.println("Insira a segunda nota");
+			nota2 = Double.parseDouble(teclado.nextLine());
+			System.out.println("Insira a terceira nota");
+			nota3 = Double.parseDouble(teclado.nextLine());
+			media = (nota1 + nota2 + nota3) / 3;
+			System.out.println("A média do aluno " + cont +" é " + media + "\n");			
+		}
 		
 	}
 }
