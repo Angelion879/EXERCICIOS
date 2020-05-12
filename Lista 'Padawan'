@@ -3,17 +3,17 @@ import java.util.Scanner;
 public class Princi {
 
 	public static void main(String[] args) {
+		//QUESTÃO 1
+		
 		Scanner teclado = new Scanner(System.in);
 		
-    //QUESTÃO 1 - Cálculo de IMC
-    
 		double peso, altura, IMC;
 		System.out.println("Olá, User! Por favor insira seu peso (em KG):");
 		peso = Double.parseDouble(teclado.nextLine());
 		System.out.println("Certo, agora insira sua altura (em METROS):");
 		altura = Double.parseDouble(teclado.nextLine());
 		IMC = peso / (Math.pow(altura, 2));
-		System.out.println("Seu IMC é: " + IMC);
+		System.out.printf("Seu IMC é %.2f \n", IMC);
 		if(IMC < 18.5) {
 			System.out.println("Tá magin, viu? tem que comer.");
 			System.exit(0);
@@ -44,7 +44,7 @@ public class Princi {
 		}
 		
 		
-		// QUESTÃO 2 - Resultado de uma divisão visível apenas com senha
+		// QUESTÃO 2
 		String senha, verif;
 		int num1, num2;
 		double result;
@@ -59,7 +59,7 @@ public class Princi {
 		verif = teclado.nextLine();
 		
 		if(senha.contentEquals(verif)) {
-			System.out.println("Seu resultado é: " + result);
+			System.out.printf("Seu resultado é: %.1f", result);
 			System.exit(0);
 		}
 		else{
