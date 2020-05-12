@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class Princi {
 
 	public static void main(String[] args) {
-		//QUESTÃO 1
 		
 		Scanner teclado = new Scanner(System.in);
+
+		
+		//QUESTÃO 1 - Cálculo de IMC
 		
 		double peso, altura, IMC;
 		System.out.println("Olá, User! Por favor insira seu peso (em KG):");
@@ -18,23 +20,23 @@ public class Princi {
 			System.out.println("Tá magin, viu? tem que comer.");
 			System.exit(0);
 		}
-		if(IMC >= 18.5 || IMC <= 24.9) {
+		else if(IMC >= 18.5 && IMC <= 24.9) {
 			System.out.println("Parabéns, você é normalíssimo");
 			System.exit(0);
 		}
-		if(IMC >= 25.0 || IMC <= 29.9) {
+		else if(IMC >= 25.0 && IMC <= 29.9) {
 			System.out.println("Tá com sobrepeso, viu, amiguinho? Vamo fazer uns exercício aí");
 			System.exit(0);
 		}
-		if(IMC >= 30 || IMC <= 34.9) {
+		else if(IMC >= 30 && IMC <= 34.9) {
 			System.out.println("Tu sabia que tu tá na obeso? Hora de fazer umas dieta, pcr");
 			System.exit(0);
 		}
-		if(IMC >= 35.0 || IMC <= 39.9) {
+		else if(IMC >= 35.0 && IMC <= 39.9) {
 			System.out.println("Amigue, tu tá com OBESIDADE MÓRBIDA. Sabe o que é isso? TU PODE MORRER DE VEIA ENTUPIDA CARA");
 			System.exit(0);
 		}
-		if(IMC > 39.9) {
+		else if(IMC > 39.9) {
 			System.out.println("Tem mais jeito não, já morreu faz tempo e esqueceram de enterrar.");
 			System.exit(0);
 		}
@@ -44,7 +46,8 @@ public class Princi {
 		}
 		
 		
-		// QUESTÃO 2
+		// QUESTÃO 2 - Confirmação de senha para mostrar um resultado
+		
 		String senha, verif;
 		int num1, num2;
 		double result;
@@ -68,6 +71,33 @@ public class Princi {
 		}
 		
 		
-		// QUESTÃO 3
+		// QUESTÃO 3 - Qual nome é mais próximo de A
+		
+		String nome1, nome2, nome3, nome4, nome5, menor;
+		System.out.println("Seguinte, me dá um nome aí ");
+		nome1 = teclado.nextLine();
+		System.out.println("Agora outro.");
+		nome2 = teclado.nextLine();
+		System.out.println("Mais um");
+		nome3 = teclado.nextLine();
+		System.out.println("Outro nome");
+		nome4 = teclado.nextLine();
+		System.out.println("Último nome, porfavore");
+		nome5 = teclado.nextLine();
+		
+		if(nome1.compareTo(nome2)<0) {menor = nome1;}
+		else {menor = nome2;}
+		
+		if(menor.compareTo(nome3)<0) {}
+		else {menor = nome3;}
+		
+		if(menor.compareTo(nome4)<0) {}
+		else {menor = nome4;}
+		
+		if(menor.compareTo(nome5)<0) {}
+		else {menor = nome5;}
+		
+		System.out.println("Dos listados, o nome mais próximo de A é " + menor);
+		
 	}
 }
