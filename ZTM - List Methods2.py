@@ -1,5 +1,5 @@
-# using this list, 
-basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+# using this list,
+basket = ["Banana", "Apples", "Oranges", "Blueberries"]
 
 # 1. Remove the Banana from the list
 basket.remove("banana")
@@ -20,45 +20,3 @@ basket.count("Apple")
 basket.clear()
 
 print(basket)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Solution:
-#1 - basket.remove('Banana')
-#2 - basket.pop()
-#3 - basket.append('Kiwi')
-#4 - basket.insert(0, 'Apples')
-#5 - basket.count('Apples')
-#6 - basket.clear()

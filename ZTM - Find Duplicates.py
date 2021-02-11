@@ -1,5 +1,5 @@
-#Exercise
-some_list = ['a','b','c','b','d','m','n','n']
+# Exercise
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 duplicates = []
 
 for item in some_list:
